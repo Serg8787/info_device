@@ -9,7 +9,7 @@ class MockInfoDevicePlatform
     implements InfoDevicePlatform {
 
   @override
-  Future<String?> getPlatformVersion() => Future.value('42');
+  Future<String?> getInfoDevice() => Future.value('42');
 }
 
 void main() {

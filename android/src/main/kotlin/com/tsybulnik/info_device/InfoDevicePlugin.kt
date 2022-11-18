@@ -28,7 +28,7 @@ class InfoDevicePlugin : FlutterPlugin, MethodCallHandler {
 //      result.notImplemented()
 //    }
         when (call.method) {
-            "versionReleae" -> result.success("Android ${android.os.Build.VERSION.RELEASE}")
+            "versionRelease" -> result.success("Android ${android.os.Build.VERSION.RELEASE}")
             "modelPhone" -> result.success("Android ${android.os.Build.MODEL}")
             "brandPhone" -> result.success("Android ${android.os.Build.BRAND}")
             "device" -> result.success("Android ${android.os.Build.DEVICE}")
@@ -45,3 +45,4 @@ class InfoDevicePlugin : FlutterPlugin, MethodCallHandler {
             channel.setMethodCallHandler(null)
         }
     }
+}
