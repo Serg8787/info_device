@@ -31,15 +31,15 @@ class InfoDevicePlugin : FlutterPlugin, MethodCallHandler {
 //    }
         when (call.method) {
             "versionRelease" -> result.success("Android ${android.os.Build.VERSION.RELEASE}")
-            "modelPhone" -> result.success("Android ${android.os.Build.MODEL}")
-            "brandPhone" -> result.success("Android ${android.os.Build.BRAND}")
-            "device" -> result.success("Android ${android.os.Build.DEVICE}")
-            "display" -> result.success("Android ${android.os.Build.DISPLAY}")
-            "baseOS" -> result.success("Android ${android.os.Build.VERSION.BASE_OS}")
-            "hardware" -> result.success("Android ${android.os.Build.HARDWARE}")
-            "idDevice" -> result.success("Android ${android.os.Build.ID}")
-            "product" -> result.success("Android ${android.os.Build.PRODUCT}")
-            "timeInfo" -> result.success("Android ${android.os.Build.TIME}")
+            "modelPhone" -> result.success("Model ${android.os.Build.MODEL}")
+            "brandPhone" -> result.success("Brand ${android.os.Build.BRAND}")
+            "device" -> result.success("Device ${android.os.Build.DEVICE}")
+            "display" -> result.success("Display ${android.os.Build.DISPLAY}")
+            "baseOS" -> result.success("Base OS ${android.os.Build.VERSION.BASE_OS}")
+            "hardware" -> result.success("HArdware ${android.os.Build.HARDWARE}")
+            "idDevice" -> result.success("ID ${android.os.Build.ID}")
+            "product" -> result.success("Product ${android.os.Build.PRODUCT}")
+            "timeInfo" -> result.success("TimeInfo ${android.os.Build.TIME}")
             else -> result.notImplemented()
         }
     }
