@@ -26,4 +26,13 @@ abstract class InfoDevicePlatform extends PlatformInterface {
   Future<String?> getInfoDevice() {
     throw UnimplementedError('platformVersion() has not been implemented.');
   }
+
+  Future<String?> getBrand() {
+    throw UnimplementedError('platformVersion() has not been implemented.');
+  }
+  Future<String?> getModel() {
+    throw UnimplementedError('platformVersion() has not been implemented.');
+  }
+
+
 }

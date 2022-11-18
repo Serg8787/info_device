@@ -16,6 +16,8 @@ class InfoDevicePlugin : FlutterPlugin, MethodCallHandler {
     /// when the Flutter Engine is detached from the Activity
     private lateinit var channel: MethodChannel
 
+
+
     override fun onAttachedToEngine(@NonNull flutterPluginBinding: FlutterPlugin.FlutterPluginBinding) {
         channel = MethodChannel(flutterPluginBinding.binaryMessenger, "info_device")
         channel.setMethodCallHandler(this)
@@ -40,9 +42,10 @@ class InfoDevicePlugin : FlutterPlugin, MethodCallHandler {
             "timeInfo" -> result.success("Android ${android.os.Build.TIME}")
             else -> result.notImplemented()
         }
+    }
 
         override fun onDetachedFromEngine(@NonNull binding: FlutterPlugin.FlutterPluginBinding) {
             channel.setMethodCallHandler(null)
         }
     }
-}
+

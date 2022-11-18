@@ -8,20 +8,20 @@ class DeviceInformation {
   const MethodChannel('info_device');
 
   /// Future method to get android version of the device
-  static Future<String> get platformVersion async {
+  Future<String> get platformVersion async {
     final version = await _channel.invokeMethod('versionRelease');
     return version == null ? "" : version;
   }
 
   /// Future method to get modelPhone of device
   ///
-  static Future<String> get modelPhone async {
+   Future<String> get modelPhone async {
     final modelPhone = await _channel.invokeMethod("modelPhone");
     return modelPhone == null ? "" : modelPhone;
   }
 
   /// Future method to get brandPhone of the device
-  static Future<dynamic> get brandPhone async {
+   Future<dynamic> get brandPhone async {
     final brandPhone = await _channel.invokeMethod("brandPhone");
     return brandPhone == null ? "" : brandPhone;
   }

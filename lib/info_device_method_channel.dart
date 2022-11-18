@@ -1,4 +1,4 @@
-import 'dart:html';
+// import 'dart:html';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
@@ -16,4 +16,18 @@ class MethodChannelInfoDevice extends InfoDevicePlatform {
     final data = await methodChannel.invokeMethod<String>('getInfoDevice');
     return data;
   }
+
+  @override
+  Future<String?> getBrand() async {
+    final data = await methodChannel.invokeMethod<String>('brandModel');
+    return data;
+  }
+  @override
+  Future<String?> getModel() async {
+    final data = await methodChannel.invokeMethod<String>('getModel');
+    return data;
+  }
+
+
+
 }
