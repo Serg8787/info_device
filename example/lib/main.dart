@@ -18,8 +18,7 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   String _platformVersion = 'Unknown';
-  final _infoDevicePlugin = InfoDevice();
-  final _infoDevicePlugi1n = DeviceInformation();
+  final _infoDevicePlugin = DeviceInformation();
 
 
   @override
@@ -35,7 +34,7 @@ class _MyAppState extends State<MyApp> {
     // We also handle the message potentially returning null.
     try {
       platformVersion =
-          await _infoDevicePlugi1n.brandPhone ?? 'Unknown platform version';
+          await _infoDevicePlugin.display ?? 'Unknown platform version';
     } on PlatformException {
       platformVersion = 'Failed to get platform version.';
     }

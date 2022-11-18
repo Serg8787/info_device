@@ -27,37 +27,37 @@ class DeviceInformation {
   }
 
   /// Future method to get display
-  static Future<String> get display async {
+ Future<String> get display async {
     final display = await _channel.invokeMethod("display");
     return display == null ? "" : display;
   }
 
   /// Future method to get baseOS
-  static Future<String> get baseOS async {
+  Future<String> get baseOS async {
     final baseOS = await _channel.invokeMethod("baseOS");
     return baseOS == null ? "" : baseOS;
   }
 
   /// Future method to get hardware
-  static Future<String> get hardware async {
+   Future<String> get hardware async {
     final hardware = await _channel.invokeMethod("hardware");
     return hardware == null ? "" : hardware;
   }
 
   /// Future method to get idDevice
-  static Future<String> get productName async {
+   Future<String> get productName async {
     final idDevice = await _channel.invokeMethod("idDevice");
     return idDevice == null ? "" : idDevice;
   }
 
   /// Future method to get product
-  static Future<String> get product async {
+  Future<String> get product async {
     final product = await _channel.invokeMethod("product");
     return product == null ? "" : product;
   }
 
   /// Future method to get timeInfo
-  static Future<String> get timeInfo async {
+  Future<String> get timeInfo async {
     final timeInfo = await _channel.invokeMethod("timeInfo");
     return timeInfo == null ? "" : timeInfo;
   }
